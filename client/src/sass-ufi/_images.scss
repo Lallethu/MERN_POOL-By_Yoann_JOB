@@ -1,0 +1,15 @@
+// On pourra modifier les bords via les classes .img-rounded, img-circle et .img-thumbnail
+@each $key, $val in $images-style {
+    .img-#{$key} {
+        border-radius: $val;
+    }
+}
+
+.img-responcive {
+    max-width: map-get($images-responsible, "w");
+    height: map-get($images-responsible, "h");
+}
+
+.img-blur {
+    filter : blur(6px);
+}
